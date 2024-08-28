@@ -39,6 +39,4 @@ slimfeet@DESKTOP-I9NO7VH:~/docker-images$ docker run -d -p 9090:80 --name ubuntu
 770658432ff2286cf9f78fe1e33d76bca09a0f072493dd43eac57f6fda4252e1
 ```
 10. Check your browser by using the local IP or Public IP with exposed port 9090
- 
-
 
