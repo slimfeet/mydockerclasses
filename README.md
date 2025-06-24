@@ -2,12 +2,10 @@
 This tutorial is a walk-through of how to create a Dockerfile and spin up an image from the Dockerfile. 
 At the end of this tutorial, you will learn the bash script commands needed and how to write them in a dockerfile. 
 ### Pre-requisites
-1. Ensure Docker service is Up and running. Use `docker --status` to 
-establish if docker is running. If not running, use `sudo service 
-docker start` to start the Docker service. 
-2. This tutorial is based on Debian O.S distribution. Alter commands according to the
-Linux distribution you are using. 
-#Steps
+1. Ensure Docker service is Up and running.
+   > To check if Docker service is up and running, type the `docker --status` command. If not, run the command `sudo service docker start` to start the Docker service. 
+2. Use any Linux Distribution of your choice. This guide is based on Debian distribution. Linux commands might defer slightly.  
+### Steps
 1. Start the Docker Service
 `sudo service docker start`
 2. Create a Dockerfile with the file name *Dockerfile*
