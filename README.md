@@ -1,4 +1,4 @@
-#Instructions for Creating a Custom Ubuntu Apache Image from a Dockerfile  
+#Instructions for Creating a Custom Ubuntu Apache Image from a Dockerfile#  
 This tutorial is a walk-through of how to create a Dockerfile and spin up an image
 from the Dockerfile. At the end of this tutorial, you will learn the bash script 
 commands needed and how to write them in a dockerfile. 
