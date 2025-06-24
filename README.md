@@ -10,32 +10,42 @@ At the end of this tutorial, you will learn the bash script commands needed and 
 ```
 sudo service docker start
 ```
-3. Create a Dockerfile with the file name *Dockerfile*
-`nano Dockerfile`
-4. Write the following script which will create an Apache image on Ubuntu O.S
+2. Create a Dockerfile with the file name **Dockerfile**
+```
+nano Dockerfile
+```
+3. Write the following script inside the Dockerfile. This script defines how to build a docker image that runs an Apache Web Server on an Ubuntu-based Container. 
 ```
 FROM ubuntu:latest
-
-RUN apt-get update && apt-get install -y apache2
-
+RUN apt-get update && apt-get install -y apache2=
 CMD ["apachectl", "-D", "FOREGROUND"]
 ```
-4. Save the Dockerfile by pressing **Ctrl + O** to Write Out, press Enter to accept
- changes then **Ctrl + X** to exit Nano Text Editor.
+4. Save the Dockerfile by typing **Ctrl + O** to Write Out, press Enter to accept changes. Type **Ctrl + X** to exit Nano Text Editor.
 5. Now, build the Ubuntu Apache image using the following command:
-`docker build --tag ubuntu_apache:v1 .`
-6. Check to confirm if the image has been built
-`docker images`
-7. If your Ubuntu:Apache image is listed, run the image to create a Docker container
-`docker run --name ubuntu-apache -d ubuntu_apache:v1`
-8. Check to confirm if the container is running.
-`docker ps`
-9. Expose to port 9090 to view the installed Apache on the browser.
-`docker run -d -p 9090:80 --name ubuntu-apache ubuntu_apache:v1`
-Output
 ```
-slimfeet@DESKTOP-I9NO7VH:~/docker-images$ docker run -d -p 9090:80 --name ubuntu-test ubuntu_apache:v2
+docker build --tag ubuntu_apache:v1 .
+```
+6. Check to confirm if the image is built by using this command:
+```
+docker images
+```
+7. If your Ubuntu:Apache image is listed, run the image to create a Docker container
+```
+docker run --name ubuntu-apache -d ubuntu_apache:v1
+```
+8. Check to confirm if the container is running.
+```
+docker ps
+```
+9. Expose to port 9090 to view the installed Apache on the browser.
+
+```
+docker run -d -p 9090:80 --name ubuntu-apache ubuntu_apache:v2
+```
+You should see the following output or something similar:
+```
 770658432ff2286cf9f78fe1e33d76bca09a0f072493dd43eac57f6fda4252e1
 ```
-10. Check your browser by using the local IP or Public IP with exposed port 9090
+10. Check if Apache Web Server is running, on your browser, by using the local IP or Public IP with exposed port 9090
+    
 
