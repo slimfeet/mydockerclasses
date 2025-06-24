@@ -7,10 +7,12 @@ At the end of this tutorial, you will learn the bash script commands needed and 
 2. Use any Linux Distribution of your choice. This guide is based on Debian distribution. Linux commands might defer slightly.  
 ### Steps
 1. Start the Docker Service
-`sudo service docker start`
-2. Create a Dockerfile with the file name *Dockerfile*
+```
+sudo service docker start
+```
+3. Create a Dockerfile with the file name *Dockerfile*
 `nano Dockerfile`
-3. Write the following script which will create an Apache image on Ubuntu O.S
+4. Write the following script which will create an Apache image on Ubuntu O.S
 ```
 FROM ubuntu:latest
 
